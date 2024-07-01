@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#im-e-state-variables" class="md-skip">
+        <a href="#state-variables-vocabulary" class="md-skip">
           Skip to content
         </a>
       
@@ -383,10 +383,10 @@
   </a>
 
 
-<h1 id="im-e-state-variables">im-e-state-variables</h1>
-<p>Informatiemodel voor het NBNLES State Variables Profile.</p>
-<p>URI: https://w3id.org/Netbeheer-Nederland/im-e-state-variables</p>
-<p>Name: im-e-state-variables</p>
+<h1 id="state-variables-vocabulary">State Variables Vocabulary</h1>
+<p>This vocabulary describes the state variables profile from NBNLES.</p>
+<p>URI: http://data.netbeheernederland.nl/im-e-state-variables/version#1.0.0</p>
+<p>Name: StateVariablesProfile</p>
 <h2 id="classes">Classes</h2>
 <table>
 <thead>
@@ -397,16 +397,52 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="ActivePower/">ActivePower</a></td>
+<td>Product of RMS value of the voltage and the RMS value of the in-phase compone...</td>
+</tr>
+<tr>
+<td><a href="AngleDegrees/">AngleDegrees</a></td>
+<td>Measurement of angle in degrees</td>
+</tr>
+<tr>
 <td><a href="IdentifiedObject/">IdentifiedObject</a></td>
-<td>Represents a IdentifiedObject</td>
+<td>This is a root class to provide common identification for all classes needing...</td>
 </tr>
 <tr>
-<td><a href="IdentifiedObjectCollection/">IdentifiedObjectCollection</a></td>
-<td>A holder for IdentifiedObject objects</td>
+<td><a href="Name/">Name</a></td>
+<td>The Name class provides the means to define any number of human readable  nam...</td>
 </tr>
 <tr>
-<td><a href="NamedThing/">NamedThing</a></td>
-<td>A generic grouping for any identifiable entity</td>
+<td><a href="NameType/">NameType</a></td>
+<td>Type of name</td>
+</tr>
+<tr>
+<td><a href="NameTypeAuthority/">NameTypeAuthority</a></td>
+<td>Authority responsible for creation and management of names of a given type; t...</td>
+</tr>
+<tr>
+<td><a href="ReactivePower/">ReactivePower</a></td>
+<td>Product of RMS value of the voltage and the RMS value of the quadrature compo...</td>
+</tr>
+<tr>
+<td><a href="SvInjection/">SvInjection</a></td>
+<td>The SvInjection reports the calculated bus injection minus the sum of the ter...</td>
+</tr>
+<tr>
+<td><a href="SvVoltage/">SvVoltage</a></td>
+<td>State variable for voltage</td>
+</tr>
+<tr>
+<td><a href="TopologicalIsland/">TopologicalIsland</a></td>
+<td>An electrically connected subset of the network</td>
+</tr>
+<tr>
+<td><a href="TopologicalNode/">TopologicalNode</a></td>
+<td>For a detailed substation model a topological node is a set of connectivity n...</td>
+</tr>
+<tr>
+<td><a href="Voltage/">Voltage</a></td>
+<td>Electrical voltage, can be both AC and DC</td>
 </tr>
 </tbody>
 </table>
@@ -420,36 +456,92 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="age_in_years/">age_in_years</a></td>
-<td>Number of years since birth</td>
+<td><a href="angle/">angle</a></td>
+<td>The voltage angle of the topological node complex voltage with respect to sys...</td>
 </tr>
 <tr>
-<td><a href="birth_date/">birth_date</a></td>
-<td>Date on which a person is born</td>
+<td><a href="angle_ref_topological_island/">angle_ref_topological_island</a></td>
+<td>The island for which the node is an angle reference</td>
+</tr>
+<tr>
+<td><a href="angle_ref_topological_node/">angle_ref_topological_node</a></td>
+<td>The angle reference for the island</td>
 </tr>
 <tr>
 <td><a href="description/">description</a></td>
-<td>A human-readable description for a thing</td>
+<td>The description is a free human readable text describing or naming the object</td>
 </tr>
 <tr>
-<td><a href="entries/">entries</a></td>
+<td><a href="energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
+</tr>
+<tr>
+<td><a href="identified_object/">identified_object</a></td>
+<td>Identified object that this name designates</td>
+</tr>
+<tr>
+<td><a href="m_rid/">m_rid</a></td>
+<td>Master resource identifier issued by a model authority</td>
+</tr>
+<tr>
+<td><a href="multiplier/">multiplier</a></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="id/">id</a></td>
-<td>A unique identifier for a thing</td>
+<td><a href="name_type/">name_type</a></td>
+<td>Type of this name</td>
 </tr>
 <tr>
-<td><a href="name/">name</a></td>
-<td>A human-readable name for a thing</td>
+<td><a href="name_type_authority/">name_type_authority</a></td>
+<td>Authority responsible for managing names of this type</td>
 </tr>
 <tr>
-<td><a href="primary_email/">primary_email</a></td>
-<td>The main email address of a person</td>
+<td><a href="name_types/">name_types</a></td>
+<td>All name types managed by this authority</td>
 </tr>
 <tr>
-<td><a href="vital_status/">vital_status</a></td>
-<td>living or dead status</td>
+<td><a href="names/">names</a></td>
+<td>All names of this identified object</td>
+</tr>
+<tr>
+<td><a href="p_injection/">p_injection</a></td>
+<td>The active power mismatch between calculated injection and initial injection</td>
+</tr>
+<tr>
+<td><a href="q_injection/">q_injection</a></td>
+<td>The reactive power mismatch between calculated injection and initial injectio...</td>
+</tr>
+<tr>
+<td><a href="sv_injection/">sv_injection</a></td>
+<td>The injection flows state variables associated with the topological node</td>
+</tr>
+<tr>
+<td><a href="sv_voltage/">sv_voltage</a></td>
+<td>The state voltage associated with the topological node</td>
+</tr>
+<tr>
+<td><a href="topological_island/">topological_island</a></td>
+<td>A topological node belongs to a topological island</td>
+</tr>
+<tr>
+<td><a href="topological_node/">topological_node</a></td>
+<td>The topological node associated with the flow injection state variable</td>
+</tr>
+<tr>
+<td><a href="topological_nodes/">topological_nodes</a></td>
+<td>A topological node belongs to a topological island</td>
+</tr>
+<tr>
+<td><a href="unit/">unit</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="v/">v</a></td>
+<td>The voltage magnitude at the topological node</td>
+</tr>
+<tr>
+<td><a href="value/">value</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -463,7 +555,11 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="PersonStatus/">PersonStatus</a></td>
+<td><a href="UnitMultiplier/">UnitMultiplier</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="UnitSymbol/">UnitSymbol</a></td>
 <td></td>
 </tr>
 </tbody>

@@ -278,19 +278,6 @@
     Identifier and Mapping Information
   </a>
   
-    <nav class="md-nav" aria-label="Identifier and Mapping Information">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#schema-source" class="md-nav__link">
-    Schema Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -321,8 +308,7 @@
 
 
 <h1 id="slot-description">Slot: description</h1>
-<p><em>A human-readable description for a thing</em></p>
-<p>URI: <a href="http://schema.org/description">schema:description</a></p>
+<p>URI: <a href="http://data.netbeheernederland.nl/im-e-state-variables/def#description">this:description</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -336,13 +322,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../NamedThing/">NamedThing</a></td>
-<td>A generic grouping for any identifiable entity</td>
+<td><a href="../NameType/">NameType</a></td>
+<td>Type of name</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../TopologicalIsland/">TopologicalIsland</a></td>
+<td>An electrically connected subset of the network</td>
 <td>no</td>
 </tr>
 <tr>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
-<td>Represents a IdentifiedObject</td>
+<td>This is a root class to provide common identification for all classes needing...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../NameTypeAuthority/">NameTypeAuthority</a></td>
+<td>Authority responsible for creation and management of names of a given type; t...</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -352,20 +348,14 @@
 <li>Range: <a href="../String/">String</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
-<h3 id="schema-source">Schema Source</h3>
-<ul>
-<li>from schema: https://w3id.org/Netbeheer-Nederland/im-e-state-variables</li>
-</ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A human-readable description for a thing</span>
-<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/Netbeheer-Nederland/im-e-state-variables</span>
-<span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
-<span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema:description</span>
 <span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description</span>
 <span class="nt">domain_of</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NamedThing</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentifiedObject</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameType</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameTypeAuthority</span>
 <span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 </code></pre></div>
 </details>

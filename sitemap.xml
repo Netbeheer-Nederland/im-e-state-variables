@@ -6,6 +6,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/ActivePower/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/AngleDegrees/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/Boolean/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
@@ -51,11 +61,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/IdentifiedObjectCollection/</loc>
-         <lastmod>2024-07-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/Integer/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
@@ -71,7 +76,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/NamedThing/</loc>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/Name/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/NameType/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/NameTypeAuthority/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -91,7 +106,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/PersonStatus/</loc>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/ReactivePower/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -101,12 +116,47 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/StateVariablesProfile/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/String/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/SvInjection/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/SvVoltage/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/Time/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/TopologicalIsland/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/TopologicalNode/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/UnitMultiplier/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/UnitSymbol/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -121,17 +171,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/Voltage/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/about/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/age_in_years/</loc>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/angle/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/birth_date/</loc>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/angle_ref_topological_island/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/angle_ref_topological_node/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -141,32 +201,92 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/entries/</loc>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/energy_ident_code_eic/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/id/</loc>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/identified_object/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/im-e-state-variables/</loc>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/m_rid/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/name/</loc>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/multiplier/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/primary_email/</loc>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/name_type/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/vital_status/</loc>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/name_type_authority/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/name_types/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/names/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/p_injection/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/q_injection/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/sv_injection/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/sv_voltage/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/topological_island/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/topological_node/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/topological_nodes/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/unit/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/v/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Netbeheer-Nederland.github.io/im-e-state-variables/value/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
