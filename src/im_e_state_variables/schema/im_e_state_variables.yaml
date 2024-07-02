@@ -501,6 +501,49 @@ classes:
         range: TopologicalNode
         required: true
     class_uri: cim:SvVoltage
+  SvPowerFlow:
+    description: State variable for power flow. Load convention is used for flow direction.
+      This means flow out from the TopologicalNode into the equipment is positive.
+    attributes:
+      p:
+        description: The active power flow. Load sign convention is used, i.e. positive
+          sign means flow out from a TopologicalNode (bus) into the conducting equipment.
+        slot_uri: cim:SvPowerFlow.p
+        multivalued: false
+        range: ActivePower
+        required: true
+      q:
+        description: The reactive power flow. Load sign convention is used, i.e. positive
+          sign means flow out from a TopologicalNode (bus) into the conducting equipment.
+        slot_uri: cim:SvPowerFlow.q
+        multivalued: false
+        range: ReactivePower
+        required: true
+      terminal:
+        description: The terminal associated with the power flow state variable.
+        slot_uri: cim:SvPowerFlow.Terminal
+        multivalued: false
+        range: Terminal
+        required: true
+    class_uri: cim:SvPowerFlow
+  Terminal:
+    description: An AC electrical connection point to a piece of conducting equipment.
+      Terminals are connected at physical connection points called connectivity nodes.
+    is_a: ACDCTerminal
+    attributes:
+      sv_power_flow:
+        description: The power flow state variable associated with the terminal.
+        slot_uri: cim:Terminal.SvPowerFlow
+        multivalued: false
+        range: SvPowerFlow
+        required: false
+    class_uri: cim:Terminal
+  ACDCTerminal:
+    description: An electrical connection point (AC or DC) to a piece of conducting
+      equipment. Terminals are connected at physical connection points called connectivity
+      nodes.
+    is_a: IdentifiedObject
+    class_uri: cim:ACDCTerminal
   AngleDegrees:
     description: Measurement of angle in degrees.
     attributes:
