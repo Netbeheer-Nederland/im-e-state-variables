@@ -1,5 +1,55 @@
 name: StateVariablesProfile
-description: This vocabulary describes the state variables profile from NBNLES.
+description: |-
+  This vocabulary describes the state variables profile from NBNLES.
+
+  ```mermaid
+  classDiagram
+  direction RL
+
+  class TopologicalIsland {
+      TopologicalNode angle_ref_topological_node
+      TopologicalNode topological_nodes
+      string m_rid
+      string description
+      string energy_ident_code_eic
+      string european_article_number_ean
+      Name names
+  }
+  class TopologicalNode {
+      SvInjection sv_injection
+      SvVoltage sv_voltage
+      TopologicalIsland angle_ref_topological_island
+      TopologicalIsland topological_island
+  }
+  class SvInjection {
+      ActivePower p_injection
+      ReactivePower q_injection
+      TopologicalNode topological_node
+  }
+  class SvVoltage {
+      AngleDegrees angle
+      Voltage v
+      TopologicalNode topological_node
+  }
+  class SvPowerFlow {
+      ActivePower p
+      ReactivePower q
+      Terminal terminal
+  }
+  class Terminal {
+      SvPowerFlow sv_power_flow
+      string m_rid
+      string description
+      string energy_ident_code_eic
+      string european_article_number_ean
+      Name names
+  }
+  TopologicalIsland --> TopologicalNode : angle_ref_topological_node
+  TopologicalIsland --> TopologicalNode : topological_nodes
+  SvInjection --> TopologicalNode : topological_node
+  SvVoltage --> TopologicalNode : topological_node
+  SvPowerFlow --> Terminal : terminal
+  ```
 title: State Variables Vocabulary
 id: http://data.netbeheernederland.nl/im-e-state-variables/version#1.0.0
 imports:

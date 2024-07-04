@@ -1,0 +1,568 @@
+{
+    "$defs": {
+        "ACDCTerminal": {
+            "additionalProperties": false,
+            "description": "An electrical connection point (AC or DC) to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes.",
+            "properties": {
+                "description": {
+                    "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                    "type": "string"
+                },
+                "energy_ident_code_eic": {
+                    "description": "The attribute is used for an exchange of the EIC code (Energy identification Code). The length of the string is 16 characters as defined by the EIC code. For details on EIC scheme please refer to ENTSO-E web site.",
+                    "type": "string"
+                },
+                "european_article_number_ean": {
+                    "description": "The attribute is used for an exchange of the EAN code (European Article Number). The length of the string is 16 characters as defined by the EAN code. For details on EAN scheme please refer to the [Codebesluit toekenning EAN-codes elektriciteit](https://www.acm.nl/nl/publicaties/codebesluit-toekenning-ean-codes-elektriciteit).",
+                    "type": "string"
+                },
+                "m_rid": {
+                    "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.\nFor CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                    "type": "string"
+                },
+                "names": {
+                    "description": "All names of this identified object.",
+                    "items": {
+                        "$ref": "#/$defs/Name"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "m_rid"
+            ],
+            "title": "ACDCTerminal",
+            "type": "object"
+        },
+        "ActivePower": {
+            "additionalProperties": false,
+            "description": "Product of RMS value of the voltage and the RMS value of the in-phase component of the current.",
+            "properties": {
+                "multiplier": {
+                    "$ref": "#/$defs/UnitMultiplier"
+                },
+                "unit": {
+                    "$ref": "#/$defs/UnitSymbol"
+                },
+                "value": {
+                    "type": "number"
+                }
+            },
+            "title": "ActivePower",
+            "type": "object"
+        },
+        "AngleDegrees": {
+            "additionalProperties": false,
+            "description": "Measurement of angle in degrees.",
+            "properties": {
+                "multiplier": {
+                    "$ref": "#/$defs/UnitMultiplier"
+                },
+                "unit": {
+                    "$ref": "#/$defs/UnitSymbol"
+                },
+                "value": {
+                    "type": "number"
+                }
+            },
+            "title": "AngleDegrees",
+            "type": "object"
+        },
+        "IdentifiedObject": {
+            "additionalProperties": false,
+            "description": "This is a root class to provide common identification for all classes needing identification and naming attributes.",
+            "properties": {
+                "description": {
+                    "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                    "type": "string"
+                },
+                "energy_ident_code_eic": {
+                    "description": "The attribute is used for an exchange of the EIC code (Energy identification Code). The length of the string is 16 characters as defined by the EIC code. For details on EIC scheme please refer to ENTSO-E web site.",
+                    "type": "string"
+                },
+                "european_article_number_ean": {
+                    "description": "The attribute is used for an exchange of the EAN code (European Article Number). The length of the string is 16 characters as defined by the EAN code. For details on EAN scheme please refer to the [Codebesluit toekenning EAN-codes elektriciteit](https://www.acm.nl/nl/publicaties/codebesluit-toekenning-ean-codes-elektriciteit).",
+                    "type": "string"
+                },
+                "m_rid": {
+                    "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.\nFor CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                    "type": "string"
+                },
+                "names": {
+                    "description": "All names of this identified object.",
+                    "items": {
+                        "$ref": "#/$defs/Name"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "m_rid"
+            ],
+            "title": "IdentifiedObject",
+            "type": "object"
+        },
+        "Name": {
+            "additionalProperties": false,
+            "description": "The Name class provides the means to define any number of human readable  names for an object. A name is <b>not</b> to be used for defining inter-object relationships. For inter-object relationships instead use the object identification 'mRID'.",
+            "properties": {
+                "identified_object": {
+                    "$ref": "#/$defs/IdentifiedObject",
+                    "description": "Identified object that this name designates."
+                },
+                "name_type": {
+                    "$ref": "#/$defs/NameType",
+                    "description": "Type of this name."
+                }
+            },
+            "required": [
+                "name_type",
+                "identified_object"
+            ],
+            "title": "Name",
+            "type": "object"
+        },
+        "NameType": {
+            "additionalProperties": false,
+            "description": "Type of name. Possible values for attribute 'name' are implementation dependent but standard profiles may specify types. An enterprise may have multiple IT systems each having its own local name for the same object, e.g. a planning system may have different names from an EMS. An object may also have different names within the same IT system, e.g. localName as defined in CIM version 14. The definition from CIM14 is:\r\nThe localName is a human readable name of the object. It is a free text name local to a node in a naming hierarchy similar to a file directory structure. A power system related naming hierarchy may be: Substation, VoltageLevel, Equipment etc. Children of the same parent in such a hierarchy have names that typically are unique among them.",
+            "properties": {
+                "description": {
+                    "description": "Description of the name type.\r\n",
+                    "type": "string"
+                },
+                "name_type_authority": {
+                    "$ref": "#/$defs/NameTypeAuthority",
+                    "description": "Authority responsible for managing names of this type."
+                },
+                "names": {
+                    "description": "All names of this type.",
+                    "items": {
+                        "$ref": "#/$defs/Name"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "NameType",
+            "type": "object"
+        },
+        "NameTypeAuthority": {
+            "additionalProperties": false,
+            "description": "Authority responsible for creation and management of names of a given type; typically an organization or an enterprise system.",
+            "properties": {
+                "description": {
+                    "description": "Description of the name type authority.\r\n",
+                    "type": "string"
+                },
+                "name_types": {
+                    "description": "All name types managed by this authority.",
+                    "items": {
+                        "$ref": "#/$defs/NameType"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "NameTypeAuthority",
+            "type": "object"
+        },
+        "ReactivePower": {
+            "additionalProperties": false,
+            "description": "Product of RMS value of the voltage and the RMS value of the quadrature component of the current.",
+            "properties": {
+                "multiplier": {
+                    "$ref": "#/$defs/UnitMultiplier"
+                },
+                "unit": {
+                    "$ref": "#/$defs/UnitSymbol"
+                },
+                "value": {
+                    "type": "number"
+                }
+            },
+            "title": "ReactivePower",
+            "type": "object"
+        },
+        "SvInjection": {
+            "additionalProperties": false,
+            "description": "The SvInjection reports the calculated bus injection minus the sum of the terminal flows. The terminal flow is positive out from the bus (load sign convention) and bus injection has positive flow into the bus. SvInjection may have the remainder after state estimation or slack after power flow calculation.",
+            "properties": {
+                "p_injection": {
+                    "$ref": "#/$defs/ActivePower",
+                    "description": "The active power mismatch between calculated injection and initial injection.  Positive sign means injection into the TopologicalNode (bus)."
+                },
+                "q_injection": {
+                    "$ref": "#/$defs/ReactivePower",
+                    "description": "The reactive power mismatch between calculated injection and initial injection.  Positive sign means injection into the TopologicalNode (bus)."
+                },
+                "topological_node": {
+                    "$ref": "#/$defs/TopologicalNode",
+                    "description": "The topological node associated with the flow injection state variable."
+                }
+            },
+            "required": [
+                "p_injection",
+                "topological_node"
+            ],
+            "title": "SvInjection",
+            "type": "object"
+        },
+        "SvPowerFlow": {
+            "additionalProperties": false,
+            "description": "State variable for power flow. Load convention is used for flow direction. This means flow out from the TopologicalNode into the equipment is positive.",
+            "properties": {
+                "p": {
+                    "$ref": "#/$defs/ActivePower",
+                    "description": "The active power flow. Load sign convention is used, i.e. positive sign means flow out from a TopologicalNode (bus) into the conducting equipment."
+                },
+                "q": {
+                    "$ref": "#/$defs/ReactivePower",
+                    "description": "The reactive power flow. Load sign convention is used, i.e. positive sign means flow out from a TopologicalNode (bus) into the conducting equipment."
+                },
+                "terminal": {
+                    "$ref": "#/$defs/Terminal",
+                    "description": "The terminal associated with the power flow state variable."
+                }
+            },
+            "required": [
+                "p",
+                "q",
+                "terminal"
+            ],
+            "title": "SvPowerFlow",
+            "type": "object"
+        },
+        "SvVoltage": {
+            "additionalProperties": false,
+            "description": "State variable for voltage.",
+            "properties": {
+                "angle": {
+                    "$ref": "#/$defs/AngleDegrees",
+                    "description": "The voltage angle of the topological node complex voltage with respect to system reference."
+                },
+                "topological_node": {
+                    "$ref": "#/$defs/TopologicalNode",
+                    "description": "The topological node associated with the voltage state."
+                },
+                "v": {
+                    "$ref": "#/$defs/Voltage",
+                    "description": "The voltage magnitude at the topological node. The attribute shall be a positive value."
+                }
+            },
+            "required": [
+                "angle",
+                "v",
+                "topological_node"
+            ],
+            "title": "SvVoltage",
+            "type": "object"
+        },
+        "Terminal": {
+            "additionalProperties": false,
+            "description": "An AC electrical connection point to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes.",
+            "properties": {
+                "description": {
+                    "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                    "type": "string"
+                },
+                "energy_ident_code_eic": {
+                    "description": "The attribute is used for an exchange of the EIC code (Energy identification Code). The length of the string is 16 characters as defined by the EIC code. For details on EIC scheme please refer to ENTSO-E web site.",
+                    "type": "string"
+                },
+                "european_article_number_ean": {
+                    "description": "The attribute is used for an exchange of the EAN code (European Article Number). The length of the string is 16 characters as defined by the EAN code. For details on EAN scheme please refer to the [Codebesluit toekenning EAN-codes elektriciteit](https://www.acm.nl/nl/publicaties/codebesluit-toekenning-ean-codes-elektriciteit).",
+                    "type": "string"
+                },
+                "m_rid": {
+                    "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.\nFor CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                    "type": "string"
+                },
+                "names": {
+                    "description": "All names of this identified object.",
+                    "items": {
+                        "$ref": "#/$defs/Name"
+                    },
+                    "type": "array"
+                },
+                "sv_power_flow": {
+                    "$ref": "#/$defs/SvPowerFlow",
+                    "description": "The power flow state variable associated with the terminal."
+                }
+            },
+            "required": [
+                "m_rid"
+            ],
+            "title": "Terminal",
+            "type": "object"
+        },
+        "TopologicalIsland": {
+            "additionalProperties": false,
+            "description": "An electrically connected subset of the network. Topological islands can change as the current network state changes, e.g. due to: \n- disconnect switches or breakers changing state in a SCADA/EMS.\n- manual creation, change or deletion of topological nodes in a planning tool.\nOnly energised TopologicalNode-s shall be part of the topological island.",
+            "properties": {
+                "angle_ref_topological_node": {
+                    "$ref": "#/$defs/TopologicalNode",
+                    "description": "The angle reference for the island.   Normally there is one TopologicalNode that is selected as the angle reference for each island.   Other reference schemes exist, so the association is typically optional."
+                },
+                "description": {
+                    "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                    "type": "string"
+                },
+                "energy_ident_code_eic": {
+                    "description": "The attribute is used for an exchange of the EIC code (Energy identification Code). The length of the string is 16 characters as defined by the EIC code. For details on EIC scheme please refer to ENTSO-E web site.",
+                    "type": "string"
+                },
+                "european_article_number_ean": {
+                    "description": "The attribute is used for an exchange of the EAN code (European Article Number). The length of the string is 16 characters as defined by the EAN code. For details on EAN scheme please refer to the [Codebesluit toekenning EAN-codes elektriciteit](https://www.acm.nl/nl/publicaties/codebesluit-toekenning-ean-codes-elektriciteit).",
+                    "type": "string"
+                },
+                "m_rid": {
+                    "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.\nFor CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                    "type": "string"
+                },
+                "names": {
+                    "description": "All names of this identified object.",
+                    "items": {
+                        "$ref": "#/$defs/Name"
+                    },
+                    "type": "array"
+                },
+                "topological_nodes": {
+                    "description": "A topological node belongs to a topological island.",
+                    "items": {
+                        "$ref": "#/$defs/TopologicalNode"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "angle_ref_topological_node",
+                "topological_nodes",
+                "m_rid"
+            ],
+            "title": "TopologicalIsland",
+            "type": "object"
+        },
+        "TopologicalNode": {
+            "additionalProperties": false,
+            "description": "For a detailed substation model a topological node is a set of connectivity nodes that, in the current network state, are connected together through any type of closed switches, including  jumpers. Topological nodes change as the current network state changes (i.e., switches, breakers, etc. change state).\nFor a planning model, switch statuses are not used to form topological nodes. Instead they are manually created or deleted in a model builder tool. Topological nodes maintained this way are also called \"busses\".",
+            "properties": {
+                "angle_ref_topological_island": {
+                    "$ref": "#/$defs/TopologicalIsland",
+                    "description": "The island for which the node is an angle reference.   Normally there is one angle reference node for each island."
+                },
+                "sv_injection": {
+                    "$ref": "#/$defs/SvInjection",
+                    "description": "The injection flows state variables associated with the topological node."
+                },
+                "sv_voltage": {
+                    "$ref": "#/$defs/SvVoltage",
+                    "description": "The state voltage associated with the topological node."
+                },
+                "topological_island": {
+                    "$ref": "#/$defs/TopologicalIsland",
+                    "description": "A topological node belongs to a topological island."
+                }
+            },
+            "title": "TopologicalNode",
+            "type": "object"
+        },
+        "UnitMultiplier": {
+            "description": "",
+            "enum": [
+                "y",
+                "z",
+                "a",
+                "f",
+                "p",
+                "n",
+                "micro",
+                "m",
+                "c",
+                "d",
+                "none",
+                "da",
+                "h",
+                "k",
+                "M",
+                "G",
+                "T",
+                "P",
+                "E",
+                "Z",
+                "Y"
+            ],
+            "title": "UnitMultiplier",
+            "type": "string"
+        },
+        "UnitSymbol": {
+            "description": "",
+            "enum": [
+                "none",
+                "m",
+                "kg",
+                "s",
+                "A",
+                "K",
+                "mol",
+                "cd",
+                "deg",
+                "rad",
+                "sr",
+                "Gy",
+                "Bq",
+                "degC",
+                "Sv",
+                "F",
+                "C",
+                "S",
+                "H",
+                "V",
+                "ohm",
+                "J",
+                "N",
+                "Hz",
+                "lx",
+                "lm",
+                "Wb",
+                "T",
+                "W",
+                "Pa",
+                "m2",
+                "m3",
+                "mPers",
+                "mPers2",
+                "m3Pers",
+                "mPerm3",
+                "kgm",
+                "kgPerm3",
+                "m2Pers",
+                "WPermK",
+                "JPerK",
+                "ppm",
+                "rotPers",
+                "radPers",
+                "WPerm2",
+                "JPerm2",
+                "SPerm",
+                "KPers",
+                "PaPers",
+                "JPerkgK",
+                "VA",
+                "VAr",
+                "cosPhi",
+                "Vs",
+                "V2",
+                "As",
+                "A2",
+                "A2s",
+                "VAh",
+                "Wh",
+                "VArh",
+                "VPerHz",
+                "HzPers",
+                "character",
+                "charPers",
+                "kgm2",
+                "dB",
+                "WPers",
+                "lPers",
+                "dBm",
+                "h",
+                "min",
+                "Q",
+                "Qh",
+                "ohmm",
+                "APerm",
+                "V2h",
+                "A2h",
+                "Ah",
+                "count",
+                "ft3",
+                "m3Perh",
+                "gal",
+                "Btu",
+                "l",
+                "lPerh",
+                "lPerl",
+                "gPerg",
+                "molPerm3",
+                "molPermol",
+                "molPerkg",
+                "sPers",
+                "HzPerHz",
+                "VPerV",
+                "APerA",
+                "VPerVA",
+                "rev",
+                "kat",
+                "JPerkg",
+                "m3Uncompensated",
+                "m3Compensated",
+                "WPerW",
+                "therm",
+                "onePerm",
+                "m3Perkg",
+                "Pas",
+                "Nm",
+                "NPerm",
+                "radPers2",
+                "JPerm3",
+                "VPerm",
+                "CPerm3",
+                "CPerm2",
+                "FPerm",
+                "HPerm",
+                "JPermol",
+                "JPermolK",
+                "CPerkg",
+                "GyPers",
+                "WPersr",
+                "WPerm2sr",
+                "katPerm3",
+                "d",
+                "anglemin",
+                "anglesec",
+                "ha",
+                "tonne",
+                "bar",
+                "mmHg",
+                "M",
+                "kn",
+                "Mx",
+                "G",
+                "Oe",
+                "Vh",
+                "WPerA",
+                "onePerHz",
+                "VPerVAr",
+                "ohmPerm",
+                "kgPerJ",
+                "JPers"
+            ],
+            "title": "UnitSymbol",
+            "type": "string"
+        },
+        "Voltage": {
+            "additionalProperties": false,
+            "description": "Electrical voltage, can be both AC and DC.",
+            "properties": {
+                "multiplier": {
+                    "$ref": "#/$defs/UnitMultiplier"
+                },
+                "unit": {
+                    "$ref": "#/$defs/UnitSymbol"
+                },
+                "value": {
+                    "type": "number"
+                }
+            },
+            "title": "Voltage",
+            "type": "object"
+        }
+    },
+    "$id": "http://data.netbeheernederland.nl/im-e-state-variables/version#1.0.0",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "additionalProperties": true,
+    "metamodel_version": "1.7.0",
+    "title": "StateVariablesProfile",
+    "type": "object",
+    "version": null
+}
